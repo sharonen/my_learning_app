@@ -1,4 +1,4 @@
-"""my_learning_app2 URL Configuration
+"""my_learning_app URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
