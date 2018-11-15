@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body_content %}
+<h1>
+	Learn Something New Every Day
+</h1>
+
+<h2>
+	<a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Today's Link</a>
+</h2>
+
+<a href="{% url 'random_links:new' %}" class="btn btn-primary">Save</a>
+
+
+
+{% endblock %}
+

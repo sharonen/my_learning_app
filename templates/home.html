@@ -1,14 +1,19 @@
 {% extends "layout.html" %}
 
-{% block sidebar %}{% endblock %}
+
 
 {% block body_content %}
 <div class="jumbotron text-center b">
 	<h1>My Learning App</h1>
 	<h3>Learn Something New Every Day</h3>
 	<p style="padding-top: 5cm">
-		<a href="#" role="button" class="btn btn-default btn-lg">Sign up</a> or
-		<a href="#" role="button" class="btn btn-default btn-lg">Log in</a>
+	{% if user.is_authenticated %}
+  		Hi {{ user.username }}!
+  		<p><a href="{% url 'logout' %}" class="btn btn-default btn-lg">logout</a></p>
+	{% else %}
+	<a href="#" role="button" class="btn btn-default btn-lg">Sign up</a> or
+ 	 <a href="{% url 'login' %}" class="btn btn-default btn-lg">Login</a>
+	{% endif %}
 	</p>
 </div>
 

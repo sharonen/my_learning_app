@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% load static from staticfiles %}
+
+{% block body_content %}
+
+<h1>
+	Saved History
+</h1>
+
+<ul>
+	{% for link in links %}
+	<h3>
+		<li><a href="{{link.url}}" target="_blank">{{ link }}</a>
+			<a href="{% url 'random_links:delete' pk=link.pk %}" class="btn btn-danger">Delete</a>
+		</li>
+	</h3>
+		
+{% empty %}
+    <li>No history yet.</li>
+{% endfor %}
+</ul>
+
+
+
+
+{% endblock %}

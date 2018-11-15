@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block body_content %}
+<h1>
+	Are you sure you want to delete "{{ link }}" from your history?
+</h1>
+
+<form method='POST'>
+	{% csrf_token %}
+	<input type="submit" class="btn btn-danger" value="Confirm">
+	<a href="{% url 'random_links:list' %}" class="btn btn-primary">Cancel</a>
+</form>
+{% endblock %}
