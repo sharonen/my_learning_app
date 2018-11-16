@@ -14,10 +14,9 @@
 		<li><a href="{{link.url}}" target="_blank">{{ link }}</a>
 			<a href="{% url 'random_links:delete' pk=link.pk %}" class="btn btn-danger">Delete</a>
 		</li>
-	</h3>
-		
+	</h3>	
 {% empty %}
-    <li>No history yet.</li>
+    <h3> No history yet.</h3>
 {% endfor %}
 </ul>
 

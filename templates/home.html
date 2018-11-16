@@ -13,8 +13,8 @@
 		<strong>{% if user.is_authenticated %}</strong>
   			Hi {{ user.username }}!
   			<p>
-  				<a href="{% url 'random_links:detail' %}" class="btn btn-info btn-lg">Today's Link</a>
-  				<a href="{% url 'random_links:list' %}" class="btn btn-info btn-lg">History</a>
+  				<a href="{% url 'random_links:detail' %}" class="btn btn-primary btn-lg">Did you know?</a>
+  				<a href="{% url 'random_links:list' username=user.username %}" class="btn btn-primary btn-lg">History</a>
   			</p>
   		<p><a href="{% url 'accounts:logout' %}" class="btn btn-default btn-lg">Logout</a></p>
 			{% else %}

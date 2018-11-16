@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block title_tag %}Today's Link | {{ block.super }}{% endblock %}
+{% block title_tag %}Get A Link | {{ block.super }}{% endblock %}
 
 {% block body_content %}
 <h1>
@@ -8,7 +8,7 @@
 </h1>
 
 <h2>
-	<a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Today's Link</a>
+	<a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Did you know ...?</a>
 </h2>
 
 <a href="{% url 'random_links:new' %}" class="btn btn-info btn-lg">Save</a>

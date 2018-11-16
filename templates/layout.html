@@ -35,8 +35,8 @@
                 {% if user.is_authenticated %}
                     <ul class="nav navbar-nav navbar-right">
                     	<li><a>Hi {{ user.username }}</a></li>
-						<li><a href="{% url 'random_links:detail' %}">Today's Link</a></li>
-                        <li><a href="{% url 'random_links:list' %}">History</a></li>
+						<li><a href="{% url 'random_links:detail' %}">Did you know?</a></li>
+                        <li><a href="{% url 'random_links:list' username=user.username %}">History</a></li>
                         <li><a href="{% url 'accounts:logout' %}" >Logout</a></li>
                     </ul>
                     {% endif %}

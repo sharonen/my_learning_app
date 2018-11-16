@@ -10,7 +10,7 @@
 
 <form method='POST'>
 	{% csrf_token %}
-	<input type="submit" class="btn btn-danger btn-lg" value="Confirm">
-	<a href="{% url 'random_links:list' %}" class="btn btn-info btn-lg">Cancel</a>
+	<input type="submit" class="btn btn-info btn-lg" value="Confirm">
+	<a href="{% url 'random_links:list' username=user.username %}" class="btn btn-danger btn-lg">Cancel</a>
 </form>
 {% endblock %}
