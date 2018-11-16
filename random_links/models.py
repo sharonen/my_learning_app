@@ -1,11 +1,11 @@
 from django.contrib.auth.models import User
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.db import models
 
 
 
 class Random_Link(models.Model):
-    user = models.ForeignKey(User, related_name="random_links")
+    user = models.ForeignKey(User, related_name="random_links", on_delete = models.CASCADE)
     title = models.CharField(max_length=255)
     url = models.URLField()
     created_at = models.DateTimeField(auto_now=True)
