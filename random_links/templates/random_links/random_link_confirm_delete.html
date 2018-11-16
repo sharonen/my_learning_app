@@ -1,5 +1,8 @@
 {% extends "layout.html" %}
 
+{% block title_tag %}Delete | {{ block.super }}{% endblock %}
+
+
 {% block body_content %}
 <h1>
 	Are you sure you want to delete "{{ link }}" from your history?
@@ -7,7 +10,7 @@
 
 <form method='POST'>
 	{% csrf_token %}
-	<input type="submit" class="btn btn-danger" value="Confirm">
-	<a href="{% url 'random_links:list' %}" class="btn btn-primary">Cancel</a>
+	<input type="submit" class="btn btn-danger btn-lg" value="Confirm">
+	<a href="{% url 'random_links:list' %}" class="btn btn-info btn-lg">Cancel</a>
 </form>
 {% endblock %}

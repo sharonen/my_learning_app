@@ -1,13 +1,17 @@
 {% extends "layout.html" %}
 
+{% block title_tag %}Save | {{ block.super }}{% endblock %}
+
+
+
 {% block body_content %}
 <h1>
-	{{ page_title }}
+	Save The Link To History
 </h1>
 
 <form method='POST'>
 	{%csrf_token %}
 	{{ form.as_p }}
-	<input type="submit" class="btn btn-primary" value="Save">
+	<input type="submit" class="btn btn-info btn-lg" value="Save">
 </form>
 {% endblock %}

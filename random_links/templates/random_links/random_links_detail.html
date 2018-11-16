@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 
+{% block title_tag %}Today's Link | {{ block.super }}{% endblock %}
+
 {% block body_content %}
 <h1>
 	Learn Something New Every Day
@@ -9,7 +11,7 @@
 	<a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Today's Link</a>
 </h2>
 
-<a href="{% url 'random_links:new' %}" class="btn btn-primary">Save</a>
+<a href="{% url 'random_links:new' %}" class="btn btn-info btn-lg">Save</a>
 
 
 

@@ -1,5 +1,8 @@
 {% extends "layout.html" %}
 
+{% block title_tag %}My learning App {% endblock %}
+
+
 
 
 {% block body_content %}
@@ -13,10 +16,10 @@
   				<a href="{% url 'random_links:detail' %}" class="btn btn-info btn-lg">Today's Link</a>
   				<a href="{% url 'random_links:list' %}" class="btn btn-info btn-lg">History</a>
   			</p>
-  		<p><a href="{% url 'logout' %}" class="btn btn-default btn-lg">logout</a></p>
+  		<p><a href="{% url 'accounts:logout' %}" class="btn btn-default btn-lg">Logout</a></p>
 			{% else %}
-			<a href="#" class="btn btn-default btn-lg">Sign in</a> or
- 			<a href="{% url 'login' %}" class="btn btn-default btn-lg">Login</a>
+			<a href="{% url 'accounts:signup' %}" class="btn btn-default btn-lg">Sign Up</a> or
+ 			<a href="{% url 'accounts:login' %}" class="btn btn-default btn-lg">Login</a>
 			{% endif %}
 	</p>
 </div>

@@ -20,12 +20,12 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'accounts/', include('accounts.urls')),
-    url(r'accounts/', include('django.contrib.auth.urls', namespace='accounts')),
-    url(r'^accounts/login$', auth_views.login, name='login'),
-    url(r'^random_links/', include('random_links.urls', namespace='random_links')),
     url(r'^$', views.HomeView.as_view(), name='home'),
+    url(r'^admin/', admin.site.urls),
+    url(r'accounts/', include('accounts.urls', namespace='accounts')),
+    url(r'accounts/', include('django.contrib.auth.urls')),
+    url(r'^random_links/', include('random_links.urls', namespace='random_links')),
+   
     
     
 ]
