@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  django:
+    container_name: django_server
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: my_learning_app
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"

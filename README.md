@@ -1,1 +1,14 @@
-# my_learning_app
+# My Learning App
+
+# Learn Something New Every Day...
+
+This application displays a link to learn something new every time you press the link. 
+
+The link will redirect you to a random page in Wikipedia.
+
+The pages that you liked, you can save to your history.
+
+The application requires signing up or logging in.
+
+# Enjoy and learn something new every day!
+ 
