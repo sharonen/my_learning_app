@@ -1,5 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
+from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.http import Http404
 from django.shortcuts import render, get_object_or_404
@@ -11,11 +12,10 @@ from . import models
 
 
 def random_link_detail(request):
-   # if self.request.user.is_authenticated():
-    return render(request, 'random_links/random_links_detail.html')
- #   else:
- #      return render(request, 'accounts:login')
-
+    if request.user.is_authenticated():
+        return render(request, 'random_links/random_links_detail.html')
+    else:
+        return HttpResponseRedirect('accounts/login')
 
 
 class RandomLinksListView(LoginRequiredMixin, generic.ListView ):
