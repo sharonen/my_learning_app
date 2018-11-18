@@ -12,10 +12,7 @@ from . import models
 
 
 def random_link_detail(request):
-    if request.user.is_authenticated():
-        return render(request, 'random_links/random_links_detail.html')
-    else:
-        return HttpResponseRedirect('accounts/login')
+    return render(request, 'random_links/random_links_detail.html')
 
 
 class RandomLinksListView(LoginRequiredMixin, generic.ListView ):
