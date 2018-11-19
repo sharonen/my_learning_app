@@ -69,7 +69,7 @@ class RandonLinksDeleteView(LoginRequiredMixin, generic.DeleteView):
     
     def get_success_url(self):
        return reverse_lazy('random_links:list',
-                            kwargskwargs={'username': self.request.user.username})
+                            kwargs={'username': self.request.user.username})
     
     
     

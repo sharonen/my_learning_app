@@ -10,5 +10,6 @@ The pages that you liked, you can save to your history.
 
 The application requires signing up or logging in.
 
+
 # Enjoy and learn something new every day!
  
