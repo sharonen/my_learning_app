@@ -6,7 +6,7 @@ This application displays a link to learn something new every time you press the
 
 The link will redirect you to a random page in Wikipedia.
 
-The pages that you liked, you can save to your history.
+The pages that you like, you can save to your history.
 
 The application requires signing up or logging in.
 
