@@ -21,7 +21,7 @@ The application requires signing up or logging in.
 * docker_compose up
 * open the web browser at 0.0.0.0:8000
 
-#stoping the application
+# Stoping the application
 * ctrl+c
 * docker_compose down
 
