@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title_tag %}Save | {{ block.super }}{% endblock %}
+
+{% block body_content %}
+<h2>
+	Link was already saved to history...
+</h2>
+
+<h2>
+	<a href="{% url 'random_links:detail'%}" class="btn btn-info btn-lg">Back</a>
+	<a href="{% url 'random_links:list' username=user.username %}" class="btn btn-info btn-lg">History</a>
+</h2>
+
+
+{% endblock %}

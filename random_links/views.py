@@ -1,9 +1,10 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
+from django.db import IntegrityError
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.http import Http404
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect
 from django.views import generic
 
 from . import forms
@@ -47,10 +48,12 @@ class RandomLinksCreateView(LoginRequiredMixin, generic.CreateView):
     def form_valid(self, form):
         self.object = form.save(commit=False)
         self.object.user = self.request.user
-        self.object.save()
-        return super(RandomLinksCreateView, self).form_valid(form)
-
-    
+        try:
+            self.object.save()
+            return super(RandomLinksCreateView, self).form_valid(form)
+        except IntegrityError:
+            return render(self.request, 'random_links/random_links_was_saved.html')
+        
    
 
     
@@ -66,7 +69,7 @@ class RandonLinksDeleteView(LoginRequiredMixin, generic.DeleteView):
     
     def get_success_url(self):
        return reverse_lazy('random_links:list',
-                            kwargs={'username': self.request.user.username})
+                            kwargskwargs={'username': self.request.user.username})
     
     
     
