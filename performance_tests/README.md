@@ -7,9 +7,9 @@ pip install locustio
 How to run the performance tests:
 
 
-* Inside the performance_tests folder run the command:  locust --host=http://didyouknow.link
+* Inside the performance_tests folder run the command:  locust --host=https://didyouknow.link
 
-* Open the web browser at https://127.0.0.1:8089/
+* Open the web browser at http://127.0.0.1:8089/
 
 * Input Number of users to simulate (e.g 300)
 
