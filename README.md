@@ -26,5 +26,5 @@ The application requires signing up or logging in.
 * docker_compose down
 
 
-# Enjoy and learn something new every day!
+# Enjoy and learn something new every day!!
  
